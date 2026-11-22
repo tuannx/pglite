@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-11-21",
+  "environment": {
+    "os": "Linux 7.0.0-44-generic",
+    "arch": "x64",
+    "node": "v24.22.1",
+    "cpus": "AMD EPYC 9D25 126-Core Processor"
+  },
+  "commit": "a0e0e96cb957d5caec3daa8a8e325189bbf7d8e3",
+  "results": [
+    {
+      "name": "templating.query-simple",
+      "scope": "packages/pglite/src/templating.ts query() — 2 params",
+      "warmup": 2000,
+      "iterations": 20000,
+      "medianMs": 0.00127,
+      "p95Ms": 0.00945,
+      "meanMs": 0.00517,
+      "opsPerSec": 788765
+    },
+    {
+      "name": "templating.query-nested-identifier-raw",
+      "scope": "packages/pglite/src/templating.ts query()+sql()+identifier()+raw() nested",
+      "warmup": 2000,
+      "iterations": 20000,
+      "medianMs": 0.00379,
+      "p95Ms": 0.05241,
+      "meanMs": 0.01558,
+      "opsPerSec": 263808
+    },
+    {
+      "name": "templating.query-100-params",
+      "scope": "packages/pglite/src/templating.ts sql() — 100 params",
+      "warmup": 500,
+      "iterations": 5000,
+      "medianMs": 0.00541,
+      "p95Ms": 0.01207,
+      "meanMs": 0.01904,
+      "opsPerSec": 184969
+    }
+  ]
+}
